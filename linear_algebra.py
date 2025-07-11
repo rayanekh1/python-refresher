@@ -1,41 +1,28 @@
 import numpy as np
 
-# messing with vectors
-a = np.array([1, 2, 3])
-b = np.array([4, 5, 6])
+# Q1: vector math
+vec1 = np.array([1, 2, 3])
+vec2 = np.array([4, 5, 6])
+print(f"sum: {vec1 + vec2}")
+print(f"diff: {vec1 - vec2}")
 
-print("Vector a:", a)
-print("Vector b:", b)
+# Q2: matrix addition + subtraction
+mat1 = np.array([[1, 2], [3, 4]])
+mat2 = np.array([[5, 6], [7, 8]])
+print(f"matrix sum:\n{mat1 + mat2}")
+print(f"matrix diff:\n{mat1 - mat2}")
 
-print("Sum:", a + b)
-print("Diff:", a - b)
+# Q3: dot product
+print(f"dot: {np.dot(vec1, vec2)}")
 
-# matrices
-A = np.array([[1, 2], [3, 4]])
-B = np.array([[5, 6], [7, 8]])
+# Q4: matrix mult
+m1 = np.array([[1, 2, 3], [4, 5, 6]])
+m2 = np.array([[7, 8, 9, 10], [11, 12, 13, 14], [15, 16, 17, 18]])
+print(f"product:\n{np.dot(m1, m2)}")
 
-print("\nMatrix A:\n", A)
-print("Matrix B:\n", B)
-
-print("A + B:\n", A + B)
-print("A - B:\n", A - B)
-
-# dot product
-dot = a @ b
-print("\nDot product:", dot)
-
-# matrix mult (for some reason they use 2x3 and 3x2 here?)
-A_big = np.array([[1, 2, 3], [4, 5, 6]])
-B_big = np.array([[7, 8], [9, 10], [11, 12]])
-
-product = A_big @ B_big
-print("\nMatrix product:\n", product)
-
-# magnitude
+# Q5: magnitude
 v = np.array([1, 1, 2])
-print("\nMagnitude of", v, ":", np.linalg.norm(v))
+print(f"magnitude: {np.linalg.norm(v)}")
 
-# transpose
-A_trans = np.array([[1, 2], [3, 4]])
-print("\nOriginal:\n", A_trans)
-print("Transpose:\n", A_trans.T)
+# Q6: transpose
+print(f"transpose:\n{mat1.T}")
